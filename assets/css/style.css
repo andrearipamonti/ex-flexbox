@@ -1,7 +1,7 @@
 .parent {
     min-height: calc(100vh - 4em);
     background-color: var(--color-purple);
-    border-top: 2px solid var(--color-blue-darker);
+    border-top: 3em solid var(--color-blue-darker);
 
     padding: 2em;
     display: flex;
