@@ -1,0 +1,27 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.parent {
+    position: relative;
+}
+
+.parent:hover {
+    .parent-watermark {
+        opacity: 0.25;
+    }
+}
+
+.parent-watermark {
+    position: absolute;
+    top: 0.15em;
+    left: 0.15em;
+
+    opacity: 0.05;
+    z-index: 0;
+    font-size: 10vw;
+
+    font-weight: bold;
+
+    transition: all .3s ease-in-out;
+}
