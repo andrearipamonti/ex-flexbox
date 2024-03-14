@@ -1,5 +1,129 @@
+
+:root {
+    --color-orange: #ff6f3c;
+    --color-orange-darker: #d64b19;
+    --color-blue: #155263;
+    --color-blue-darke: #042832;
+    --color-orange-child: #ff6f3c;
+    --color-white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    cursor: pointer;
+    .nav-list-label {
+        padding: 0.75em 1em;
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+    }
+
+    .nav-list-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list-label::after {
+        content: '';
+        height: 0;
+        width: 0;
+        display: block;
+        border-style: solid;
+        border-color: transparent transparent var(--color-white) transparent;
+        border-width: 0 0.4em 0.5em 0.4em;
+        transform: rotate(180deg);
+        margin-left: 1em;
+    }
+
+    .nav-list-label:hover + .nav-list {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        max-height: 30em;
+        overflow: scroll;
+        border-bottom: 1px solid var(--color-orange-darker);
+    }
+
+    .nav-list:hover { 
+        display: block;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-orange);
+    }
+    
+
+    a {
+        cursor: pointer;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        padding: 1em;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    li a:hover {
+        background-color: var(--color-orange-darker);
+    }
+}
+
+.welcome {
+    
+    min-height: calc(100vh - 4em);
+    padding: 2em;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+
+    h1 {
+        font-size: 15vw;
+        font-weight: bold;
+    }
+}
+
+.btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 1em 2em;
+    font-size: 2.25vw;
+    border-radius: 4rem;
+    display: inline-block;
+    margin-top: 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: var(--color-white);
 }
 
 .parent {
@@ -8,7 +132,6 @@ body {
 
 .child {
     border-radius: 0.25em;
-    border: 2px solid #b25619;
     opacity: 0.6;
     transition: all .3s ease-in-out;
 }
@@ -39,7 +162,7 @@ body {
 
 .parent-watermark {
     position: absolute;
-    top: 0.15em;
+    top: 0.5em;
     left: 0.15em;
 
     opacity: 0.05;
