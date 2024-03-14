@@ -1,12 +1,38 @@
 .parent {
-    min-height: 100vh;
+    min-height: calc(100vh - 4em);
     background-color: #8C22C7;
     border: 1px solid black;
+
+    display: flex;
+
+    padding: 2em;
+
+    gap: 1em;
 }
+
+.parent-no-padding {
+    padding: 0;
+    min-height: 100vh;
+}
+
 
 .child {
     background-color: #C76522;
     color: #fff;
+
+    width: 18em;
+    height: 12em;
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    span {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
 /* 
@@ -24,3 +50,146 @@
         }
     }
 */
+
+.parent-1 {
+    align-items: center;
+    justify-content: center;
+}
+
+.parent-2 {
+    align-items: center;
+    flex-direction: column;
+}
+
+.parent-3 {
+    align-items: center;
+    flex-direction: column;
+
+    .child {
+        flex: 1 1 auto;
+    }
+}
+
+.parent-4 {
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .child-self-start {
+        align-self: start;
+    }
+}
+
+.parent-5 {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.parent-6 {
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.parent-7 {
+    align-items: flex-end;
+    
+    .child {
+        width: 100%;
+    }
+}
+
+.parent-8 {
+    align-items: center;
+    justify-content: space-between;
+
+    .child {
+        flex: 1 1 auto;
+    }
+    .child-first {
+        align-self: flex-end;
+    }
+    .child-last {
+        align-self: flex-start;
+    }
+}
+
+.parent-9, 
+.parent-10,
+.parent-11, 
+.parent-12,
+.parent-13, 
+.parent-14, 
+.parent-15 {
+    align-items: center;
+    justify-content: center;
+
+    .child {
+        flex: 1 1 auto;
+    }
+}
+
+.parent-9, 
+.parent-10 {
+    .child-first {
+        order: -2;
+    }
+
+    .child-last {
+        order: -1;
+    }
+}
+
+.parent-10 {
+    .child-last {
+        align-self: flex-end;
+    }
+}
+
+.parent-11 {
+    gap: 0;
+    .child {
+        flex: 1 1 auto;
+    }
+
+    .child-second {
+        order: -2;
+    }
+
+    .child-last {
+        order: -1;
+    }
+}
+
+.parent-12 {
+    .child-first {
+        margin-top: 14em;
+    }
+    .child-last {
+        margin-bottom: 14em;
+    }
+}
+
+.parent-13 {
+    gap: 8em;
+    .child-second {
+        order: -1;
+    }
+}
+
+.parent-14 {
+
+    .child-second {
+        flex-grow: 10;
+    }
+}
+
+.parent-15 {
+    flex-direction: row-reverse;
+    .child-last {
+        flex-grow: 10;
+    }
+}
+
+.parent-16 {
+    justify-content: space-between;
+    align-items: center;
+}
