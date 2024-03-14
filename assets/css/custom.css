@@ -3,7 +3,8 @@
     --color-orange: #ff6f3c;
     --color-orange-darker: #d64b19;
     --color-blue: #155263;
-    --color-blue-darke: #042832;
+    --color-purple: #8C22C7;
+    --color-blue-darker: #042832;
     --color-orange-child: #ff6f3c;
     --color-white: #fff;
 }
@@ -21,6 +22,11 @@ a {
     text-decoration: none;
 }
 
+::selection {
+    color: #ff9a3c;
+    background: var(--color-blue);
+}
+
 .nav {
     position: sticky;
     top: 0;
@@ -28,9 +34,12 @@ a {
     background-color: var(--color-blue);
     color: var(--color-white);
     cursor: pointer;
+
     .nav-list-label {
         padding: 0.75em 1em;
-        font-size: 2rem;
+        font-size: clamp(1rem, 0.7672rem + 0.3448vw, 2rem);
+
+
         display: block;
         text-align: center;
     }
@@ -63,7 +72,7 @@ a {
         right: 0;
         left: 0;
         display: none;
-        max-height: 30em;
+        max-height: 31.5em;
         overflow: scroll;
         border-bottom: 1px solid var(--color-orange-darker);
     }
@@ -83,7 +92,7 @@ a {
     a {
         cursor: pointer;
         color: var(--color-white);
-        font-size: 1.5rem;
+        font-size: clamp(0.5rem, 15vw, 2rem);
         padding: 1em;
         display: inline-block;
         transition: all 0.3s ease-in-out;
@@ -98,7 +107,8 @@ a {
 }
 
 .welcome {
-    
+    position: relative;
+    z-index: 10;
     min-height: calc(100vh - 4em);
     padding: 2em;
     background-color: var(--color-orange);
@@ -172,4 +182,58 @@ a {
     font-weight: bold;
 
     transition: all .3s ease-in-out;
+}
+
+
+@keyframes up-and-down {
+    0% {
+        bottom: 1em;
+    }
+    50% {
+        bottom: 1.5em;
+    }
+    100% {
+        bottom: 1em;
+    }
+}
+
+.back-top {
+    position: fixed;
+    z-index: 9;
+    bottom: 1em;
+    right: 1em;
+    
+
+    font-size: 2rem;
+    color: var(--color-orange-darker);
+    background-color: var(--color-white);
+    
+    height: 2.5em;
+    width: 2.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: rotate(-90deg) translateX(0%);
+
+    border: 5px solid #eaeaea;
+    opacity: 0.7;
+    
+    transition: all 0.6s ease-in-out;
+
+    animation-name: up-and-down;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+    
+    span {
+        font-size: 3rem;
+    }
+}
+
+.back-top:hover {
+    opacity: 1;
 }
