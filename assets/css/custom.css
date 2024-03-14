@@ -6,9 +6,23 @@ body {
     position: relative;
 }
 
+.child {
+    border-radius: 0.25em;
+    border: 2px solid #b25619;
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+}
+
 .parent:hover {
+
     .parent-watermark {
         opacity: 0.25;
+    }
+
+    .child {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
     }
 }
 
