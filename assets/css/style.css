@@ -2,11 +2,9 @@
     min-height: calc(100vh - 4em);
     background-color: #8C22C7;
     border: 1px solid black;
-    
     padding: 2em;
-    gap: 1em;
-
     display: flex;
+    gap: 1em;
 }
 
 .parent-no-padding {
@@ -29,7 +27,6 @@
     span {
         font-size: 3rem;
         font-weight: bold;
-        text-align: center;
     }
 }
 
@@ -144,9 +141,6 @@
 
 .parent-11 {
     gap: 0;
-    .child {
-        flex: 1 1 auto;
-    }
 
     .child-first {
         order: 1;

@@ -13,6 +13,17 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.child-copy {
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+}
+
+.child:hover {
+    .child-copy {
+        opacity: 1;
+    }
+}
+
 .parent:hover {
 
     .parent-watermark {
