@@ -1,0 +1,236 @@
+/* NON AGGIUNGERE NULLA IN QUESTO FILE */
+:root {
+    --color-orange: #ff6f3c;
+    --color-orange-darker: #d64b19;
+    --color-blue: #155263;
+    --color-purple: #8C22C7;
+    --color-blue-darker: #042832;
+    --color-orange-child: #ff6f3c;
+    --color-white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    color: #ff9a3c;
+    background: var(--color-blue);
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    cursor: pointer;
+
+    .nav-list-label {
+        padding: 0.75em 1em;
+        font-size: clamp(1rem, 0.7672rem + 0.3448vw, 2rem);
+
+
+        display: block;
+        text-align: center;
+    }
+
+    .nav-list-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list-label::after {
+        content: '';
+        height: 0;
+        width: 0;
+        display: block;
+        border-style: solid;
+        border-color: transparent transparent var(--color-white) transparent;
+        border-width: 0 0.4em 0.5em 0.4em;
+        transform: rotate(180deg);
+        margin-left: 1em;
+    }
+
+    .nav-list-label:hover + .nav-list {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        max-height: 31.5em;
+        overflow: scroll;
+        border-bottom: 1px solid var(--color-orange-darker);
+    }
+
+    .nav-list:hover { 
+        display: block;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-orange);
+    }
+    
+
+    a {
+        cursor: pointer;
+        color: var(--color-white);
+        font-size: clamp(0.5rem, 15vw, 2rem);
+        padding: 1em;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    li a:hover {
+        background-color: var(--color-orange-darker);
+    }
+}
+
+.welcome {
+    position: relative;
+    z-index: 10;
+    min-height: calc(100vh - 4em);
+    padding: 2em;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+
+    h1 {
+        font-size: 15vw;
+        font-weight: bold;
+    }
+}
+
+.btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 1em 2em;
+    font-size: 2.25vw;
+    border-radius: 4rem;
+    display: inline-block;
+    margin-top: 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: var(--color-white);
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    border-radius: 0.25em;
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+}
+
+.child-copy {
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+}
+
+.child:hover {
+    .child-copy {
+        opacity: 1;
+    }
+}
+
+.parent:hover {
+
+    .parent-watermark {
+        opacity: 0.25;
+    }
+
+    .child {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+.parent-watermark {
+    position: absolute;
+    top: 0.5em;
+    left: 0.15em;
+
+    opacity: 0.05;
+    z-index: 0;
+    font-size: 10vw;
+
+    font-weight: bold;
+
+    transition: all .3s ease-in-out;
+}
+
+
+@keyframes up-and-down {
+    0% {
+        bottom: 1em;
+    }
+    50% {
+        bottom: 1.5em;
+    }
+    100% {
+        bottom: 1em;
+    }
+}
+
+.back-top {
+    position: fixed;
+    z-index: 9;
+    bottom: 1em;
+    right: 1em;
+    
+
+    font-size: 2rem;
+    color: var(--color-orange-darker);
+    background-color: var(--color-white);
+    
+    height: 2.5em;
+    width: 2.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: rotate(-90deg) translateX(0%);
+    border: 5px solid #eaeaea;
+    opacity: 0.8;
+    transition: all 0.6s ease-in-out;
+    animation-name: up-and-down;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+    span {
+        font-size: 3rem;
+    }
+}
+
+.back-top:hover {
+    opacity: 1;
+}
+/* NON AGGIUNGERE NULLA IN QUESTO FILE */

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ex Flexbox</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+    <body id="top">
+
+        <!-- 
+            
+            Consiglio di fare riferimento a questa guida per realizzare l'esercizio
+
+            https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+            Duplica questo elemento parent per ogni grafica che devi realizzare 
+            Dentro all'elemento parent duplica l'elemento child in base alla grafica da realizzare
+
+        -->
+
+        <nav class="nav">
+
+            <div class="nav-list-wrapper">
+                <span class="nav-list-label">Seleziona esercizio</span>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#es1" title="Esercizio 1">Es. 1</a>
+                    </li>
+                    <li>
+                        <a href="#es2" title="Esercizio 2">Es. 2</a>
+                    </li>
+                    <li>
+                        <a href="#es3" title="Esercizio 3">Es. 3</a>
+                    </li>
+                    <li>
+                        <a href="#es4" title="Esercizio 4">Es. 4</a>
+                    </li>
+                    <li>
+                        <a href="#es5" title="Esercizio 5">Es. 5</a>
+                    </li>
+                    <li>
+                        <a href="#es6" title="Esercizio 6">Es. 6</a>
+                    </li>
+                    <li>
+                        <a href="#es7" title="Esercizio 7">Es. 7</a>
+                    </li>
+                    <li>
+                        <a href="#es8" title="Esercizio 8">Es. 8</a>
+                    </li>
+                    <li>
+                        <a href="#es9" title="Esercizio 9">Es. 9</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="welcome">
+            <h1>Esercitazione Flexbox</h1>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" title="Vai alla documentazione" class="btn" target="_blank">Vai alla documentazione</a>
+        </div>
+
+        <div class="parent parent-1" id="es1">
+            <span class="parent-watermark">Esercizio 1</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+        </div>
+        
+        <div class="parent parent-2" id="es2">
+            <span class="parent-watermark">Esercizio 2</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+        
+        <div class="parent parent-3" id="es3">
+            <span class="parent-watermark">Esercizio 3</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+    
+        <div class="parent parent-4" id="es4">
+            <span class="parent-watermark">Esercizio 4</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child child-self-start">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+
+        <div class="parent parent-5" id="es5">
+            <span class="parent-watermark">Esercizio 5</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+
+        <div class="parent parent-6" id="es6">
+            <span class="parent-watermark">Esercizio 6</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+        
+        <div class="parent parent-7 parent-no-padding" id="es7">
+            <span class="parent-watermark">Esercizio 7</span>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+
+        <div class="parent parent-8" id="es8">
+            <span class="parent-watermark">Esercizio 8</span>
+            <div class="child child-first">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child">
+                <span class="child-copy">Child</span>
+            </div>
+            <div class="child child-last">
+                <span class="child-copy">Child</span>
+            </div>
+
+        </div>
+
+        <div class="parent parent-9" id="es9">
+            <span class="parent-watermark">Esercizio 9</span>
+            <div class="child child-first">
+                <span>1</span>
+            </div>
+            <div class="child child-second">
+                <span>2</span>
+            </div>
+            <div class="child child-last">
+                <span>3</span>
+            </div>
+
+        </div>
+
+        <a href="#top" class="back-top">
+            <span>&#10157;</span>
+        </a>
+
+
+    </body>
+</html>

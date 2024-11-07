@@ -1,0 +1,51 @@
+.parent {
+    min-height: calc(100vh - 4em);
+    background-color: var(--color-purple);
+    border-top: 3em solid var(--color-blue-darker);
+
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+}
+
+.parent-no-padding {
+    padding: 0;
+    min-height: 100vh;
+}
+
+.child {
+    background-color: var(--color-orange-child);
+    color: #fff;
+
+    width: 18em;
+    height: 12em;
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    span {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+/* 
+    Tips 
+    Usa e crea classi in maniera appropriata, sia per padri che per i figli ( dove necessario ), esempio: 
+
+    .parent-1 per grafica 1.png
+    .parent-2 per grafica 2.png
+
+    .child-1, .child-pink ... 
+
+    Ricorda che puoi modificare i figli di specifici padri, esempio:
+    .parent-1 {
+        .child {
+        }
+    }
+*/
+
+
+/* INIZIA A SCRIVERE DA QUI */
