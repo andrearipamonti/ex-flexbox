@@ -1,0 +1,89 @@
+
+:root {
+    --color-orange: #ff6f3c;
+    --color-orange-darker: #d64b19;
+    --color-blue: #155263;
+    --color-purple: #8C22C7;
+    --color-blue-darker: #042832;
+    --color-orange-child: #ff6f3c;
+    --color-white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    color: #ff9a3c;
+    background: var(--color-blue);
+}
+
+.parent {
+    position: relative;
+    min-height: calc(100vh - 4em);
+    background-color: var(--color-purple);
+    padding: 2em;
+}
+
+.child {
+    border-radius: 0.25em;
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+    background-color: var(--color-orange-child);
+    color: #fff;
+    width: 18em;
+    height: 12em;
+    padding: 1em;
+    span {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.child-copy {
+    opacity: 0.6;
+    transition: all .3s ease-in-out;
+}
+
+.child:hover {
+    .child-copy {
+        opacity: 1;
+    }
+}
+
+.parent:hover {
+
+    .parent-watermark {
+        opacity: 0.25;
+    }
+
+    .child {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+.parent-watermark {
+    position: absolute;
+    top: 0.5em;
+    left: 0.15em;
+
+    opacity: 0.05;
+    z-index: 0;
+    font-size: 10vw;
+
+    font-weight: bold;
+
+    transition: all .3s ease-in-out;
+}
+

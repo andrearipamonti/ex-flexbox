@@ -1,0 +1,15 @@
+/* 
+    Tips 
+    Usa e crea classi in maniera appropriata, sia per padri che per i figli ( dove necessario ), esempio: 
+
+    .parent-1 per grafica 1.png
+    .parent-2 per grafica 2.png
+
+    .child-1, .child-pink ... 
+
+    Ricorda che puoi modificare i figli di specifici padri, esempio:
+    .parent-1 {
+        .child {
+        }
+    }
+*/
