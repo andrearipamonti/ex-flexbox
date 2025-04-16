@@ -7,7 +7,7 @@
 
     .child-1, .child-pink ... 
 
-    Ricorda che puoi modificare i figli di specifici padri, esempio:
+    Ricorda che puoi nidificare i figli di specifici padri, esempio:
     .parent-1 {
         .child {
         }
